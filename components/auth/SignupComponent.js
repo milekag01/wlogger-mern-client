@@ -4,9 +4,9 @@ import Router from 'next/router';
 
 const SignupComponent = () => {
     const [values, setValues] = useState({
-        name: '',
-        email: '',
-        password: '',
+        name: 'Ryan',
+        email: 'ryan@gmail.com',
+        password: 'rrrrrr',
         error: '',
         loading: false,
         message: '',

@@ -85,7 +85,7 @@ const SingleBlog = ({ blog, query }) => {
                                         src={`${API}/blog/photo/${blog.slug}`}
                                         alt={blog.title}
                                         className="img img-fluid featured-image"
-                                        style={{display:'block', marginLeft: 'auto', marginRight: 'auto', width: '100%'}}
+                                        style={{height:'80vh', width: '100%', objectFit: 'cover'}}
                                     />
                                 </div>
                             </section>

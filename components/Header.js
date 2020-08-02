@@ -34,21 +34,30 @@ const Header = () => {
     <div>
       <Navbar color="light" light expand="md">
         <Link href="/">
-          <NavLink className="font-weight-bold">{APP_NAME}</NavLink>
+          <NavLink style={{ cursor: 'pointer' }} className="font-weight-bold">{APP_NAME}</NavLink>
         </Link>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
+
+            <React.Fragment>
+              <NavItem>
+                <Link href="/blogs">
+                  <NavLink style={{ cursor: 'pointer' }}>Blogs</NavLink>
+                </Link>
+              </NavItem>
+            </React.Fragment>
+
             {!isAuth() && (
               <React.Fragment>
                 <NavItem>
                   <Link href="/signin">
-                    <NavLink>Signin</NavLink>
+                    <NavLink style={{ cursor: 'pointer' }}>Signin</NavLink>
                   </Link>
                 </NavItem>
                 <NavItem>
                   <Link href="/signup">
-                    <NavLink>Signup</NavLink>
+                    <NavLink style={{ cursor: 'pointer' }}>Signup</NavLink>
                   </Link>
                 </NavItem>
               </React.Fragment>
@@ -57,7 +66,7 @@ const Header = () => {
             {isAuth() && isAuth().role === 0 && (
               <NavItem>
                 <Link href="/user">
-                  <NavLink>{`${isAuth().name}'s Dashboard`}</NavLink>
+                  <NavLink style={{ cursor: 'pointer' }}>{`${isAuth().name}'s Dashboard`}</NavLink>
                 </Link>
               </NavItem>
             )}
@@ -65,7 +74,7 @@ const Header = () => {
             {isAuth() && isAuth().role === 1 && (
               <NavItem>
                 <Link href="/admin">
-                  <NavLink>{`${isAuth().name}'s Dashboard`}</NavLink>
+                  <NavLink style={{ cursor: 'pointer' }}>{`${isAuth().name}'s Dashboard`}</NavLink>
                 </Link>
               </NavItem>
             )}

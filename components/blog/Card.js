@@ -29,7 +29,14 @@ const Card = ({ blog }) => {
             </header>
             <section>
                 <p style={{fontSize:'18px'}} className="mark ml-1 pt-2 pb-2">
-                    <em> Written by {blog.postedBy.name}</em> | Published {moment(blog.updatedAt).fromNow()}
+                    <em> Written by
+                    {' '}
+                        <Link href={`/profile/${blog.postedBy.username}`}>
+                            <a>{blog.postedBy.username}</a>
+                        </Link>
+                    {' '}
+                    
+                    </em> | Published {moment(blog.updatedAt).fromNow()}
                 </p>
             </section>
             <section>

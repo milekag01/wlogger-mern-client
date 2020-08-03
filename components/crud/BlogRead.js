@@ -5,7 +5,7 @@ import { getCookie, isAuth } from '../../actions/auth';
 import { list, removeBlog } from '../../actions/blog';
 import moment from 'moment';
 
-const BlogRead = () => {
+const BlogRead = ({ username }) => {
     const [blogs, setBlogs] = useState([]);
     const [message, setMessage] = useState('');
     const token = getCookie('token');
@@ -15,7 +15,7 @@ const BlogRead = () => {
     }, []);
 
     const loadBlogs = () => {
-        list().then(data => {
+        list(username).then(data => {
             if (data.error) {
                 console.log(data.error);
             } else {
@@ -66,7 +66,7 @@ const BlogRead = () => {
                     <p className="mark">
                         <em>Written by {blog.postedBy.name}</em> | Published on {moment(blog.updatedAt).fromNow()}
                     </p>
-                    <button className="btn btn-sm btn-danger" onClick={() => deleteConfirm(blog.slug)}>
+                    <button className="btn btn-sm btn-danger mr-2" onClick={() => deleteConfirm(blog.slug)}>
                         Delete
                     </button>
                     {showUpdateButton(blog)}

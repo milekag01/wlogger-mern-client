@@ -2,7 +2,7 @@
   "/_document": "pages/_document.js",
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/profile/[username]": "pages/profile/[username].js",
-  "/blogs/[slug]": "pages/blogs/[slug].js",
-  "/admin": "pages/admin.js"
+  "/blogs": "pages/blogs.js",
+  "/admin/crud/blogs": "pages/admin/crud/blogs.js",
+  "/": "pages/index.js"
 }

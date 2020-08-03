@@ -7,6 +7,7 @@ module.exports = withCSS({
         PRODUCTION: false,
         DOMAIN_PRODUCTION: '',
         DOMAIN_DEVELOPMENT: 'http://localhost:3000',
-        FB_APP_ID: '1983920111740227'
+        FB_APP_ID: '1983920111740227',
+        DISQUS_SHORTNAME: 'wlogger-1'
     }
 });

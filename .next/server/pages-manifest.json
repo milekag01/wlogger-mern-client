@@ -4,7 +4,5 @@
   "/_error": "pages/_error.js",
   "/blogs/[slug]": "pages/blogs/[slug].js",
   "/": "pages/index.js",
-  "/blogs": "pages/blogs.js",
-  "/categories/[slug]": "pages/categories/[slug].js",
-  "/signin": "pages/signin.js"
+  "/profile/[username]": "pages/profile/[username].js"
 }
